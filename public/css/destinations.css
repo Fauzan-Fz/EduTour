@@ -1,0 +1,511 @@
+/* Class halaman ini mencegah benturan dengan selector kartu .destination-body di landing.css. */
+.destinations-page {
+    overflow-x: hidden;
+    background: #f8f9ff;
+}
+
+.destination-main {
+    background: #f8f9ff;
+}
+
+.destination-catalog {
+    padding: 68px 0 24px;
+}
+
+.destination-intro {
+    max-width: 670px;
+    margin-bottom: 38px;
+}
+
+.destination-intro h1 {
+    margin: 15px 0 9px;
+    color: #0b1c30;
+    font: 700 36px/1.12 'Plus Jakarta Sans', sans-serif;
+    letter-spacing: -.7px;
+}
+
+.destination-intro p {
+    margin: 0;
+    color: #64748b;
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+/* Layout dua kolom menempatkan filter di samping hasil sampai breakpoint mobile. */
+.destination-layout {
+    display: grid;
+    grid-template-columns: 246px minmax(0, 1fr);
+    align-items: start;
+    gap: 30px;
+}
+
+.filter-card {
+    position: sticky;
+    top: 98px;
+    padding: 16px;
+    border: 1px solid #e1e7f5;
+    border-radius: 16px;
+    background: #f1f4ff;
+    box-shadow: 0 2px 5px rgba(78, 91, 135, .06);
+}
+
+.filter-search {
+    height: 36px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 0 10px 0 12px;
+    border: 1px solid #d9e0ee;
+    border-radius: 7px;
+    background: #fff;
+}
+
+.filter-search input {
+    min-width: 0;
+    flex: 1;
+    border: 0;
+    outline: 0;
+    color: #475569;
+    background: transparent;
+    font: 400 10px/14px 'Inter', sans-serif;
+}
+
+.filter-search input::placeholder {
+    color: #94a3b8;
+}
+
+.filter-search > span:last-child {
+    color: #2b71e9;
+    font-size: 19px;
+    line-height: 1;
+    transform: rotate(-20deg);
+}
+
+.filter-group {
+    min-width: 0;
+    margin: 21px 0 0;
+    padding: 0;
+    border: 0;
+}
+
+.filter-group legend,
+.filter-label-row legend {
+    padding: 0;
+    color: #64748b;
+    font: 700 9px/13px 'Inter', sans-serif;
+    letter-spacing: .42px;
+}
+
+.level-options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 7px;
+    margin-top: 9px;
+}
+
+.level-options button {
+    min-width: 41px;
+    min-height: 26px;
+    padding: 3px 8px;
+    border: 1px solid #d7deed;
+    border-radius: 7px;
+    color: #64748b;
+    background: #fff;
+    font: 600 9px/14px 'Inter', sans-serif;
+}
+
+.level-options button.selected {
+    border-color: #2c6cf4;
+    color: #1f5eff;
+    background: #e3ebff;
+}
+
+.check-options {
+    display: grid;
+    gap: 10px;
+    margin-top: 11px;
+}
+
+.check-options label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #475569;
+    font-size: 10px;
+    line-height: 14px;
+}
+
+.check-options input {
+    width: 13px;
+    height: 13px;
+    margin: 0;
+    accent-color: #2c6cf4;
+}
+
+.select-control {
+    position: relative;
+    display: block;
+    margin-top: 10px;
+}
+
+.select-control select {
+    width: 100%;
+    height: 34px;
+    padding: 0 30px 0 11px;
+    appearance: none;
+    border: 1px solid #d7deed;
+    border-radius: 7px;
+    outline: 0;
+    color: #64748b;
+    background: #fff;
+    font: 400 10px/14px 'Inter', sans-serif;
+}
+
+.select-control > span:last-child {
+    position: absolute;
+    top: 8px;
+    right: 11px;
+    color: #64748b;
+    font-size: 15px;
+    line-height: 1;
+    pointer-events: none;
+}
+
+.filter-label-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.filter-label-row button {
+    padding: 0;
+    border: 0;
+    color: #2563eb;
+    background: transparent;
+    font: 500 9px/13px 'Inter', sans-serif;
+}
+
+.price-fields {
+    display: grid;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.price-fields label {
+    display: grid;
+    gap: 5px;
+    color: #94a3b8;
+    font: 400 9px/13px 'Inter', sans-serif;
+}
+
+.price-input {
+    height: 34px;
+    display: flex;
+    align-items: center;
+    padding-left: 11px;
+    border: 1px solid #d7deed;
+    border-radius: 7px;
+    background: #fff;
+}
+
+.price-input input {
+    min-width: 0;
+    flex: 1;
+    border: 0;
+    outline: 0;
+    color: #64748b;
+    background: transparent;
+    font: 400 10px/14px 'Inter', sans-serif;
+}
+
+.price-input input::placeholder {
+    color: #c1c8d3;
+}
+
+.price-input b {
+    width: 17px;
+    height: 17px;
+    margin-right: 8px;
+    display: grid;
+    place-items: center;
+    border: 1px solid #a7b9e6;
+    border-radius: 50%;
+    color: #2c6cf4;
+    font-size: 8px;
+    line-height: 1;
+}
+
+.destination-results {
+    min-width: 0;
+}
+
+.results-heading {
+    min-height: 56px;
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    gap: 24px;
+    margin-bottom: 22px;
+}
+
+.results-kicker {
+    color: #2c6cf4;
+    font: 700 9px/13px 'Inter', sans-serif;
+    letter-spacing: .48px;
+}
+
+.results-heading h2 {
+    margin: 7px 0 0;
+    color: #0f172a;
+    font: 700 23px/30px 'Plus Jakarta Sans', sans-serif;
+    letter-spacing: -.35px;
+}
+
+.results-count {
+    margin-bottom: 4px;
+    color: #94a3b8;
+    font: 400 10px/14px 'Inter', sans-serif;
+    white-space: nowrap;
+}
+
+/* Ukuran grid kartu hanya berlaku untuk katalog, bukan kartu pada halaman beranda. */
+.destination-card-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 24px;
+}
+
+.catalog-card {
+    overflow: hidden;
+    border: 1px solid #dfe5f0;
+    border-radius: 16px;
+    background: #fff;
+    box-shadow: 0 3px 10px rgba(78, 91, 135, .06);
+}
+
+.catalog-image-wrap {
+    position: relative;
+    height: 168px;
+    overflow: hidden;
+    background: #dbe6fa;
+}
+
+.catalog-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.catalog-image-wrap::after {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    height: 45%;
+    content: '';
+    background: linear-gradient(transparent, rgba(15, 23, 42, .12));
+    pointer-events: none;
+}
+
+.catalog-tags {
+    position: absolute;
+    z-index: 1;
+    bottom: 10px;
+    left: 12px;
+    display: flex;
+    gap: 5px;
+}
+
+.catalog-tags span {
+    padding: 4px 7px;
+    border: 1px solid rgba(255, 255, 255, .85);
+    border-radius: 5px;
+    color: #475569;
+    background: rgba(255, 255, 255, .92);
+    font: 700 8px/11px 'Inter', sans-serif;
+}
+
+.catalog-rating {
+    position: absolute;
+    z-index: 1;
+    right: 10px;
+    bottom: 10px;
+    padding: 4px 7px;
+    border-radius: 5px;
+    color: #475569;
+    background: #fff;
+    font: 700 9px/11px 'Inter', sans-serif;
+}
+
+.catalog-rating::first-letter {
+    color: #f6a914;
+}
+
+.catalog-card-body {
+    padding: 16px 17px 17px;
+}
+
+.catalog-card h3 {
+    margin: 0;
+    color: #172033;
+    font: 700 15px/22px 'Plus Jakarta Sans', sans-serif;
+}
+
+.catalog-location {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin: 6px 0 0;
+    color: #64748b;
+    font: 400 9px/14px 'Inter', sans-serif;
+}
+
+.catalog-location img {
+    width: 11px;
+    height: 11px;
+}
+
+.catalog-description {
+    min-height: 42px;
+    margin: 12px 0 16px;
+    color: #64748b;
+    font: 400 10px/16px 'Inter', sans-serif;
+}
+
+.catalog-card-footer {
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    gap: 10px;
+    padding-top: 13px;
+    border-top: 1px solid #edf1f6;
+}
+
+.catalog-card-footer > span {
+    color: #94a3b8;
+    font: 400 9px/13px 'Inter', sans-serif;
+}
+
+.catalog-card-footer strong {
+    display: block;
+    color: #1261cb;
+    font: 700 14px/20px 'Inter', sans-serif;
+}
+
+.catalog-card-footer strong small {
+    color: #64748b;
+    font-size: 9px;
+    font-weight: 400;
+}
+
+.catalog-card-footer a {
+    padding: 7px 11px;
+    border: 1px solid #bad0ff;
+    border-radius: 999px;
+    color: #2563eb;
+    background: #f4f7ff;
+    font: 600 9px/13px 'Inter', sans-serif;
+    white-space: nowrap;
+}
+
+.pagination {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+    margin-top: 32px;
+}
+
+.pagination a,
+.pagination span {
+    width: 27px;
+    height: 27px;
+    display: grid;
+    place-items: center;
+    color: #64748b;
+    font: 500 10px/14px 'Inter', sans-serif;
+}
+
+.pagination a {
+    border: 1px solid #d9e0ec;
+    border-radius: 50%;
+    background: #fff;
+}
+
+.pagination a.current {
+    border-color: #2c6cf4;
+    color: #fff;
+    background: #2c6cf4;
+}
+
+@media (max-width: 900px) {
+    .destination-layout {
+        grid-template-columns: 220px minmax(0, 1fr);
+        gap: 20px;
+    }
+
+    .destination-card-grid {
+        gap: 16px;
+    }
+
+    .catalog-card-footer {
+        align-items: start;
+        flex-direction: column;
+    }
+
+}
+
+/* Pada layar kecil filter kembali ke alur dokumen agar kartu tidak melebar dari viewport. */
+@media (max-width: 720px) {
+    .destination-catalog {
+        padding: 42px 0 24px;
+    }
+
+    .destination-intro {
+        margin-bottom: 28px;
+    }
+
+    .destination-intro h1 {
+        font-size: 30px;
+    }
+
+    .destination-layout {
+        display: block;
+    }
+
+    .filter-card {
+        position: static;
+        margin-bottom: 28px;
+    }
+
+    .check-options {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .results-heading {
+        align-items: start;
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .results-count {
+        margin: 0;
+    }
+
+}
+
+@media (max-width: 480px) {
+    .destination-card-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .catalog-image-wrap {
+        height: 190px;
+    }
+
+    .catalog-card-footer {
+        align-items: end;
+        flex-direction: row;
+    }
+
+}
