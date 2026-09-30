@@ -25,6 +25,7 @@ CLAUDE.md
 /public/fonts-manifest.dev.json
 /public/hot
 /public/storage
+/database/database.sqlite
 /storage/*.key
 /storage/pail
 /vendor

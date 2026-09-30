@@ -6,6 +6,8 @@ EduTour saat ini adalah aplikasi Laravel server-rendered. Route Laravel memilih 
 
 Arsitektur ini sengaja sederhana untuk tahap implementasi UI dari Figma. Data katalog masih berada di view sehingga struktur visual dapat diverifikasi lebih dulu sebelum dipindahkan ke controller, model, atau database.
 
+Database aplikasi menggunakan MySQL untuk development lokal dan deployment VPS. PHPUnit tetap menggunakan SQLite in-memory melalui `phpunit.xml` agar test berjalan terisolasi dan tidak mengubah database development.
+
 ## Alur request
 
 ```text
