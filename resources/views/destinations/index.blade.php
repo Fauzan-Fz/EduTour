@@ -11,7 +11,7 @@
         'Pendidikan Jasmani',
     ];
 
-    {{-- Nama file di sini harus cocok dengan aset di public/images/figma agar gambar kartu tetap terpetakan. --}}
+    // Nama file harus cocok dengan aset di public/images/figma agar gambar kartu tetap terpetakan.
     $destinations = [
         [
             'image' => 'filter-sd-kampung-jamur.png',
