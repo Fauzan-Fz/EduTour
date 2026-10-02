@@ -82,8 +82,8 @@ button { font: inherit; }
 .button-outline:hover { background: var(--blue-soft); border-color: rgba(31, 94, 255, .4); box-shadow: none; }
 .nav-toggle { display: none; }
 
-.hero-section { position: relative; min-height: 760px; padding: 48px 0 160px; overflow: hidden; background: var(--surface-blue); }
-.hero-section::before { content: ''; position: absolute; inset: 0 0 80px; background: linear-gradient(209deg, rgba(211, 228, 254, .4), rgba(211, 228, 254, 0)); border-bottom-right-radius: 100px; pointer-events: none; }
+.hero-section { position: relative; min-height: 660px; padding: 26px 0 42px; overflow: hidden; background: #dceafe; }
+.hero-section::before { content: ''; position: absolute; inset: 0; background: radial-gradient(circle at 2% 53%, rgba(255, 194, 31, .75), transparent 22%), radial-gradient(circle at 83% 0%, rgba(75, 142, 225, .34), transparent 34%), linear-gradient(115deg, #e5edff 2%, #e8efff 43%, #bcd8ff 100%); border-bottom-right-radius: 92px; pointer-events: none; }
 .hero-glow { position: absolute; border-radius: 999px; filter: blur(32px); pointer-events: none; }
 .hero-glow-blue { top: -160px; right: -160px; width: 384px; height: 384px; background: rgba(0, 88, 190, .1); }
 .hero-glow-yellow { top: 160px; left: -80px; width: 288px; height: 288px; background: rgba(249, 189, 34, .2); }
@@ -96,7 +96,8 @@ button { font: inherit; }
 .hero-copy > p { max-width: 450px; margin: 0; color: #424754; font-size: 18px; line-height: 1.6; }
 .hero-actions { display: flex; flex-wrap: wrap; gap: 16px; margin-top: 25px; }
 .hero-art { position: relative; height: 594px; min-width: 0; }
-.hero-people { position: absolute; z-index: 3; top: -5px; right: 74px; width: 449px; height: 634px; max-width: none; }
+/* Bagian atas karakter tetap bebas, sementara bagian bawahnya mengikuti lengkung bubble luar. */
+.hero-people { position: absolute; z-index: 3; top: -5px; right: 74px; width: 449px; height: 634px; max-width: none; clip-path: path('M 0 0 H 449 V 394 A 266 266 0 0 1 0 475 Z'); }
 .hero-people > img { width: 100%; height: 100%; object-fit: contain; object-position: top center; }
 .art-circle { position: absolute; z-index: 1; pointer-events: none; }
 .art-circle img { width: 100%; height: 100%; object-fit: contain; }
@@ -109,17 +110,29 @@ button { font: inherit; }
 .floating-bus { position: absolute; z-index: 5; top: 52px; right: 392px; width: 44px; height: 44px; padding: 6px; display: grid; place-items: center; border-radius: 24px; background: #fff; box-shadow: var(--shadow-sm); }
 .floating-bus img { width: 31px; height: 31px; }
 .floating-place { position: absolute; z-index: 5; overflow: hidden; border-radius: 16px; background: #fff; box-shadow: var(--shadow-sm); }
-.floating-place-main { right: 348px; bottom: 0; width: 215px; padding: 6px; }
+/* Dasar kartu mengikuti titik terbawah bubble (29px + diameter 532px). */
+.floating-place-main { right: 348px; bottom: calc(100% - 561px); width: 215px; padding: 6px; }
 .floating-place-mini { right: -4px; top: 300px; width: 127px; padding: 4px; border-radius: 8px; }
-.floating-place > img, .floating-place > picture { display: block; width: 100%; height: 118px; border-radius: 8px; }
+.floating-place > img { display: block; width: 100%; height: 118px; border-radius: 8px; }
 .floating-place > img { object-fit: cover; }
-.floating-place > picture > img { width: 100%; height: 100%; border-radius: inherit; object-fit: cover; }
 .floating-place-mini > img { height: 70px; border-radius: 3px; }
 .floating-place strong { display: block; margin: 10px 6px 0; color: #333; font: 700 14px/20px 'Lato', sans-serif; }
 .floating-place small { display: flex; align-items: center; gap: 4px; margin: 2px 6px 8px; color: #64748b; font: 400 10px/14px 'Lato', sans-serif; }
 .floating-place small img { width: 12px; height: 12px; }
 .floating-place-mini strong { margin-top: 4px; font-size: 10px; line-height: 14px; }
 .floating-place-mini small { margin-bottom: 4px; font-size: 8px; line-height: 11px; }
+.floating-place-mini small img { width: 10px; height: 10px; }
+
+/* Baris pendukung mengikuti urutan dan bentuk kartu pada frame landing terbaru. */
+.supporters-section { padding: 42px 0 50px; background: #fff; }
+.supporters-section .eyebrow { display: flex; margin: 0 auto 22px; }
+.supporters-grid { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 16px; }
+.supporter-card { min-height: 92px; padding: 12px; display: flex; align-items: center; justify-content: center; border: 1px solid #e8edf5; border-radius: 12px; background: #fff; box-shadow: 0 2px 8px rgba(40, 41, 61, .04); }
+.supporter-card img { width: 100%; max-width: 145px; max-height: 65px; object-fit: contain; }
+.supporter-card:nth-child(1) img { max-width: 124px; }
+.supporter-card:nth-child(2) img { max-width: 168px; }
+.supporter-card:nth-child(3) img { max-width: 84px; }
+.supporter-card:nth-child(4) img { max-width: 128px; }
 
 .proof-section { padding: 49px 0 39px; background: #fff; }
 .proof-shell { display: grid; gap: 32px; }
@@ -256,7 +269,7 @@ button { font: inherit; }
     .art-circle-one { right: 4px; transform: scale(.9); transform-origin: top right; }
     .art-circle-two { right: 48px; transform: scale(.9); transform-origin: top right; }
     .art-circle-three { right: 90px; transform: scale(.9); transform-origin: top right; }
-    .floating-place-main { right: 290px; }
+    .floating-place-main { right: 290px; bottom: calc(100% - 508px); }
     .floating-bus { right: 335px; }
     .footer-links { gap: 32px; }
     .footer-legal { padding-inline: 48px; }
@@ -265,10 +278,12 @@ button { font: inherit; }
 @media (max-width: 900px) {
     .shell { width: min(100% - 48px, var(--shell)); }
     .main-navigation { gap: 14px; }
-    .hero-section { padding-bottom: 90px; }
+    /* Ilustrasi di-scale tanpa mengubah tinggi layout; hilangkan ruang kosong di bawahnya. */
+    .hero-section { padding-bottom: 0; }
     .hero-shell { grid-template-columns: 1fr; padding-top: 24px; }
     .hero-copy { max-width: 600px; }
     .hero-art { width: min(100%, 648px); margin: 0 auto; }
+    .supporters-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
     .curriculum-grid { grid-template-columns: 1fr; }
     .curriculum-copy { max-width: none; }
     .route-summary { gap: 16px; }
@@ -322,6 +337,9 @@ button { font: inherit; }
     .hero-actions { flex-direction: column; align-items: stretch; }
     .hero-actions .button { width: 100%; }
     .hero-art { height: 390px; transform: scale(.65); margin-top: -24px; margin-bottom: -80px; }
+    .hero-section { padding-bottom: 58px; }
+    .supporters-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; }
+    .supporter-card { min-height: 76px; font-size: 15px; }
     .stats-grid { gap: 10px; }
     .stat-card { padding: 10px 6px; }
     .stat-card strong { font-size: 18px; }
