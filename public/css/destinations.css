@@ -91,7 +91,7 @@
 .filter-group legend,
 .filter-label-row legend {
     padding: 0;
-    color: #64748b;
+    color: #475569;
     font: 700 9px/13px 'Inter', sans-serif;
     letter-spacing: .42px;
 }
@@ -116,7 +116,7 @@
 
 .level-options button.selected {
     border-color: #2c6cf4;
-    color: #1f5eff;
+    color: var(--blue-ink);
     background: #e3ebff;
 }
 
@@ -165,7 +165,7 @@
     position: absolute;
     top: 8px;
     right: 11px;
-    color: #64748b;
+    color: #475569;
     font-size: 15px;
     line-height: 1;
     pointer-events: none;
@@ -194,7 +194,7 @@
 .price-fields label {
     display: grid;
     gap: 5px;
-    color: #64748b;
+    color: #475569;
     font: 400 9px/13px 'Inter', sans-serif;
 }
 
@@ -235,6 +235,15 @@
     line-height: 1;
 }
 
+.filter-search:focus-within,
+.price-input:focus-within,
+.select-control select:focus-visible,
+.destination-layout button:focus-visible,
+.destination-layout a:focus-visible {
+    outline: 2px solid var(--blue-ink);
+    outline-offset: 2px;
+}
+
 .destination-results {
     min-width: 0;
 }
@@ -249,7 +258,7 @@
 }
 
 .results-kicker {
-    color: #2c6cf4;
+    color: var(--blue-ink);
     font: 700 9px/13px 'Inter', sans-serif;
     letter-spacing: .48px;
 }
@@ -478,8 +487,47 @@
         margin-bottom: 28px;
     }
 
+    .filter-search,
+    .select-control select,
+    .price-input {
+        min-height: 42px;
+    }
+
+    .filter-search input,
+    .select-control select,
+    .price-input input {
+        font-size: 14px;
+        line-height: 20px;
+    }
+
+    .filter-group legend,
+    .filter-label-row legend,
+    .filter-label-row button,
+    .price-fields label {
+        font-size: 12px;
+        line-height: 18px;
+    }
+
+    .level-options button {
+        min-width: 48px;
+        min-height: 36px;
+        font-size: 12px;
+        line-height: 18px;
+    }
+
     .check-options {
         grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .check-options label {
+        font-size: 13px;
+        line-height: 20px;
+    }
+
+    .check-options input {
+        width: 16px;
+        height: 16px;
+        flex: 0 0 16px;
     }
 
     .results-heading {
@@ -490,6 +538,49 @@
 
     .results-count {
         margin: 0;
+    }
+
+    .results-kicker,
+    .results-count {
+        font-size: 12px;
+        line-height: 18px;
+    }
+
+    .catalog-tags span,
+    .catalog-rating,
+    .catalog-card-footer strong small {
+        font-size: 12px;
+        line-height: 16px;
+    }
+
+    .catalog-location,
+    .catalog-card-footer > span {
+        font-size: 12px;
+        line-height: 18px;
+    }
+
+    .catalog-description {
+        min-height: 0;
+        font-size: 13px;
+        line-height: 20px;
+    }
+
+    .catalog-card-footer a {
+        padding: 9px 13px;
+        font-size: 12px;
+        line-height: 18px;
+    }
+
+    .pagination a,
+    .pagination span {
+        width: 36px;
+        height: 36px;
+        font-size: 12px;
+        line-height: 18px;
+    }
+
+    .footer-legal {
+        font-size: 12px;
     }
 
 }

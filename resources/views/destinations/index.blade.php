@@ -14,7 +14,7 @@
     // Nama file harus cocok dengan aset di public/images/figma agar gambar kartu tetap terpetakan.
     $destinations = [
         [
-            'image' => 'filter-sd-kampung-jamur.png',
+            'image' => 'filter-sd-kampung-jamur.webp',
             'title' => 'Kampung Jamur Edukatif',
             'location' => 'Batu, Jawa Timur',
             'rating' => '4.8',
@@ -23,7 +23,7 @@
             'tags' => ['SD', 'SMP'],
         ],
         [
-            'image' => 'filter-sd-museum-tubuh.png',
+            'image' => 'filter-sd-museum-tubuh.webp',
             'title' => 'Museum Tubuh Interaktif',
             'location' => 'Surabaya, Jawa Timur',
             'rating' => '4.9',
@@ -32,7 +32,7 @@
             'tags' => ['SMP', 'SMA'],
         ],
         [
-            'image' => 'filter-sd-pabrik-perak.png',
+            'image' => 'filter-sd-pabrik-perak.webp',
             'title' => 'Pabrik Perak Kotagede',
             'location' => 'Yogyakarta',
             'rating' => '4.7',
@@ -41,7 +41,7 @@
             'tags' => ['SMA', 'SMP'],
         ],
         [
-            'image' => 'filter-sd-pusat-budaya.png',
+            'image' => 'filter-sd-pusat-budaya.webp',
             'title' => 'Pusat Budaya Jawa',
             'location' => 'Surakarta, Jawa Tengah',
             'rating' => '4.6',
@@ -66,7 +66,7 @@
     <title>Destinasi — EduTour</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&family=Lato:wght@400;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;600&family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="{{ asset('css/landing.css') }}?v={{ filemtime(public_path('css/landing.css')) }}">
     <link rel="stylesheet" href="{{ asset('css/destinations.css') }}?v={{ filemtime(public_path('css/destinations.css')) }}">
 </head>
@@ -146,7 +146,7 @@
                             @foreach ($destinations as $destination)
                                 <article class="catalog-card">
                                     <div class="catalog-image-wrap">
-                                        <img src="{{ asset('images/figma/' . $destination['image']) }}" alt="{{ $destination['title'] }}" class="catalog-image" loading="lazy">
+                                        <img src="{{ asset('images/figma/' . $destination['image']) }}" alt="{{ $destination['title'] }}" class="catalog-image" width="406" height="192" loading="lazy" decoding="async">
                                         <div class="catalog-tags">@foreach ($destination['tags'] as $tag)<span>{{ $tag }}</span>@endforeach</div>
                                         <span class="catalog-rating">★ {{ $destination['rating'] }}</span>
                                     </div>
@@ -186,7 +186,7 @@
                 @foreach ($footerColumns as $heading => $links)
                     <div><h3>{{ $heading }}</h3>@foreach ($links as $link)<a href="{{ $link === 'Destinasi' ? route('destinations.index') : route('home') . '#' . \Illuminate\Support\Str::slug($link) }}">{{ $link }}</a>@endforeach</div>
                 @endforeach
-                <div><h3>Social Media</h3><div class="social-links"><a href="#instagram" aria-label="Instagram"><img src="{{ asset('images/figma/instagram.svg') }}" alt=""></a><a href="#facebook" aria-label="Facebook"><img src="{{ asset('images/figma/facebook.svg') }}" alt=""></a><a href="#twitter" aria-label="Twitter"><img src="{{ asset('images/figma/twitter.svg') }}" alt=""></a></div></div>
+                <div><h3>Social Media</h3><div class="social-links"><a href="#instagram" aria-label="Instagram"><img src="{{ asset('images/figma/instagram.svg') }}" alt="" width="20" height="20"></a><a href="#facebook" aria-label="Facebook"><img src="{{ asset('images/figma/facebook.svg') }}" alt="" width="20" height="20"></a><a href="#twitter" aria-label="Twitter"><img src="{{ asset('images/figma/twitter.svg') }}" alt="" width="20" height="20"></a></div></div>
             </div>
         </div>
         <div class="footer-legal"><span>© 2026 EduTour. All rights reserved.</span><div><a href="#terms">Terms of Service</a><a href="#privacy">Privacy Policy</a><a href="#cookies">Cookies</a></div></div>
