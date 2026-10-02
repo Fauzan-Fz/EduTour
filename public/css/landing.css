@@ -3,6 +3,7 @@
 /* Token bersama menjaga beranda dan katalog tetap memakai sistem visual yang sama. */
 :root {
     --blue: #1f5eff;
+    --blue-ink: #1b56e3;
     --blue-dark: #0b1c30;
     --blue-soft: #e9efff;
     --text: #0f172a;
@@ -78,7 +79,7 @@ button { font: inherit; }
 .button:hover { transform: translateY(-2px); background: #184bd0; box-shadow: 0 9px 16px rgba(31, 94, 255, .22); }
 .button img { width: 12px; height: 12px; object-fit: contain; }
 .button-small { min-width: 93px; min-height: 44px; padding-inline: 24px; }
-.button-outline { color: var(--blue); background: transparent; border: 2px solid rgba(0, 88, 190, .2); box-shadow: none; }
+.button-outline { color: var(--blue-ink); background: transparent; border: 2px solid rgba(0, 88, 190, .2); box-shadow: none; }
 .button-outline:hover { background: var(--blue-soft); border-color: rgba(31, 94, 255, .4); box-shadow: none; }
 .nav-toggle { display: none; }
 
@@ -89,7 +90,7 @@ button { font: inherit; }
 .hero-glow-yellow { top: 160px; left: -80px; width: 288px; height: 288px; background: rgba(249, 189, 34, .2); }
 .hero-shell { position: relative; z-index: 1; min-height: 552px; padding: 0 16px; display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); align-items: center; gap: 48px; }
 .hero-copy { max-width: 453px; }
-.eyebrow { width: max-content; max-width: 100%; padding: 4px 12px; border: 1px solid #b8ccff; border-radius: 999px; display: inline-flex; align-items: center; color: var(--blue); background: rgba(233, 239, 255, .75); font: 600 12px/16px 'Inter', sans-serif; letter-spacing: .45px; white-space: nowrap; }
+.eyebrow { width: max-content; max-width: 100%; padding: 4px 12px; border: 1px solid #b8ccff; border-radius: 999px; display: inline-flex; align-items: center; color: var(--blue-ink); background: rgba(233, 239, 255, .75); font: 600 12px/16px 'Inter', sans-serif; letter-spacing: .45px; white-space: nowrap; }
 .eyebrow-green { color: #00714d; border-color: rgba(108, 248, 187, .5); background: rgba(108, 248, 187, .3); font-weight: 400; }
 .hero-copy h1 { margin: 20px 0 16px; color: var(--blue-dark); font: 700 48px/1.1 'Hanken Grotesk', sans-serif; letter-spacing: -.96px; }
 .hero-copy h1 span { color: var(--blue); }
@@ -157,7 +158,7 @@ button { font: inherit; }
 .steps-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; margin-top: 56px; }
 .step-card { min-height: 316px; padding: 33px; border: 1px solid #e2e8f0; border-radius: 16px; background: #fff; box-shadow: 0 2px 4px rgba(40, 41, 61, .03); }
 .step-topline { display: flex; align-items: center; justify-content: space-between; }
-.step-number { width: 40px; height: 40px; display: grid; place-items: center; border-radius: 10px; background: var(--blue-soft); color: var(--blue); font: 700 14px/20px 'Inter', sans-serif; }
+.step-number { width: 40px; height: 40px; display: grid; place-items: center; border-radius: 10px; background: var(--blue-soft); color: var(--blue-ink); font: 700 14px/20px 'Inter', sans-serif; }
 .step-card:nth-child(2) .step-number { color: #fff; background: var(--blue); }
 .step-topline > img { width: 22px; height: 22px; object-fit: contain; }
 .step-copy { margin-top: 24px; }
@@ -171,7 +172,7 @@ button { font: inherit; }
 .case-card { overflow: hidden; border: 1px solid #dfe6f0; border-radius: 16px; background: #fff; box-shadow: var(--shadow-sm); }
 .case-image { width: 100%; height: 288px; object-fit: cover; }
 .case-body { padding: 30px 24px 25px; }
-.small-label, .field-label { display: block; color: var(--blue); font: 700 10px/14px 'Inter', sans-serif; letter-spacing: .6px; }
+.small-label, .field-label { display: block; color: var(--blue-ink); font: 700 10px/14px 'Inter', sans-serif; letter-spacing: .6px; }
 .case-body h3 { margin: 9px 0 26px; font: 700 24px/30px 'Plus Jakarta Sans', sans-serif; }
 .field-label { margin-top: 18px; color: #64748b; }
 .tag-list { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
@@ -199,7 +200,7 @@ button { font: inherit; }
 .route-stop.blue { border-color: #b8ccff; background: #f7f9ff; }
 .route-stop img { width: 24px; height: 24px; margin-bottom: 8px; object-fit: contain; }
 .route-label { color: #475569; font: 700 9px/13px 'Inter', sans-serif; }
-.route-stop.blue .route-label, .route-stop.green .route-label { color: var(--blue); }
+.route-stop.blue .route-label, .route-stop.green .route-label { color: var(--blue-ink); }
 .route-stop.green .route-label { color: #047857; }
 .route-stop strong { margin-top: 4px; font: 700 14px/20px 'Plus Jakarta Sans', sans-serif; }
 .route-stop small { color: #64748b; font-size: 11px; line-height: 16px; }
