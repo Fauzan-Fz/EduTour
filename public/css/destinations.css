@@ -71,7 +71,7 @@
 }
 
 .filter-search input::placeholder {
-    color: #94a3b8;
+    color: #64748b;
 }
 
 .filter-search > span:last-child {
@@ -194,7 +194,7 @@
 .price-fields label {
     display: grid;
     gap: 5px;
-    color: #94a3b8;
+    color: #64748b;
     font: 400 9px/13px 'Inter', sans-serif;
 }
 
@@ -219,7 +219,7 @@
 }
 
 .price-input input::placeholder {
-    color: #c1c8d3;
+    color: #64748b;
 }
 
 .price-input b {
@@ -263,7 +263,7 @@
 
 .results-count {
     margin-bottom: 4px;
-    color: #94a3b8;
+    color: #64748b;
     font: 400 10px/14px 'Inter', sans-serif;
     white-space: nowrap;
 }
@@ -382,7 +382,7 @@
 }
 
 .catalog-card-footer > span {
-    color: #94a3b8;
+    color: #64748b;
     font: 400 9px/13px 'Inter', sans-serif;
 }
 

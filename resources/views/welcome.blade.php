@@ -67,7 +67,27 @@
             <div class="hero-glow hero-glow-blue"></div><div class="hero-glow hero-glow-yellow"></div>
             <div class="hero-shell shell">
                 <div class="hero-copy"><span class="eyebrow eyebrow-green">Platform Eduwisata</span><h1>Satu <span>Perjalanan</span><br>Banyak Pengalaman.</h1><p>EduTour membantu sekolah menemukan destinasi edukatif terbaik dan menyusun rute pembelajaran & wisata yang terhubung dalam satu perjalanan.</p><div class="hero-actions"><a class="button" href="{{ route('destinations.index') }}">Jelajahi Destinasi <img src="{{ asset('images/figma/arrow-right.svg') }}" alt="" width="12" height="12"></a><a class="button button-outline" href="#rute">Rencanakan Perjalanan</a></div></div>
-                <div class="hero-art" aria-label="Ilustrasi siswa dan guru dalam perjalanan edukasi" role="img"><div class="art-circle art-circle-one"><img src="{{ asset('images/figma/circle-1.svg') }}" alt=""></div><div class="art-circle art-circle-two"><img src="{{ asset('images/figma/circle-2.svg') }}" alt=""></div><div class="art-circle art-circle-three"><img src="{{ asset('images/figma/circle-3.svg') }}" alt=""></div><img class="hero-people" src="{{ asset('images/figma/hero.png') }}" alt="Siswa dan pendamping dalam aktivitas edukasi"><span class="art-dot art-dot-yellow"></span><span class="art-dot art-dot-blue"></span><div class="floating-bus"><img src="{{ asset('images/figma/bus.svg') }}" alt="" width="31" height="31"></div><article class="floating-place floating-place-main"><img src="{{ asset('images/figma/maspion.png') }}" alt="PT Maspion" loading="lazy"><strong>PT Maspion</strong><small><img src="{{ asset('images/figma/location.svg') }}" alt="" width="12" height="12"> Jawa Timur, Indonesia</small></article><article class="floating-place floating-place-mini"><img src="{{ asset('images/figma/favehotel.png') }}" alt="Favehotel" loading="lazy"><strong>Favehotel</strong><small>Jawa Tengah</small></article></div>
+                <div class="hero-art" aria-label="Ilustrasi siswa dan guru dalam perjalanan edukasi" role="img">
+                    <div class="art-circle art-circle-one"><img src="{{ asset('images/figma/circle-1.svg') }}" alt=""></div>
+                    <div class="art-circle art-circle-two"><img src="{{ asset('images/figma/circle-2.svg') }}" alt=""></div>
+                    <div class="art-circle art-circle-three"><img src="{{ asset('images/figma/circle-3.svg') }}" alt=""></div>
+                    <picture class="hero-people">
+                        <source srcset="{{ asset('images/figma/hero.webp') }}" type="image/webp">
+                        <img src="{{ asset('images/figma/hero.png') }}" alt="Siswa dan pendamping dalam aktivitas edukasi" width="1120" height="1583" fetchpriority="high">
+                    </picture>
+                    <span class="art-dot art-dot-yellow"></span>
+                    <span class="art-dot art-dot-blue"></span>
+                    <div class="floating-bus"><img src="{{ asset('images/figma/bus.svg') }}" alt="" width="31" height="31"></div>
+                    <article class="floating-place floating-place-main">
+                        <picture>
+                            <source srcset="{{ asset('images/figma/maspion.webp') }}" type="image/webp">
+                            <img src="{{ asset('images/figma/maspion.png') }}" alt="PT Maspion" width="720" height="540" loading="lazy" decoding="async">
+                        </picture>
+                        <strong>PT Maspion</strong>
+                        <small><img src="{{ asset('images/figma/location.svg') }}" alt="" width="12" height="12"> Jawa Timur, Indonesia</small>
+                    </article>
+                    <article class="floating-place floating-place-mini"><img src="{{ asset('images/figma/favehotel.png') }}" alt="Favehotel" loading="lazy"><strong>Favehotel</strong><small>Jawa Tengah</small></article>
+                </div>
             </div>
         </section>
 
