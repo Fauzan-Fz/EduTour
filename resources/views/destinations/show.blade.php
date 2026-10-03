@@ -412,13 +412,13 @@
             <div class="similar-grid">
                 @foreach ($similarDestinations as $item)
                     <article class="similar-card">
-                        <div class="similar-card-img-wrap">
+                        <a href="{{ route('destinations.show') }}" class="similar-card-img-wrap" aria-label="{{ $item['title'] }}">
                             <img src="{{ asset('images/figma/' . $item['image']) }}" alt="{{ $item['title'] }}" width="380" height="180" loading="lazy" decoding="async">
                             <span class="similar-rating-badge"><span class="star">★</span> {{ $item['rating'] }}</span>
-                        </div>
+                        </a>
                         <div class="similar-card-body">
                             <span class="similar-category-tag">{{ $item['category'] }}</span>
-                            <h3>{{ $item['title'] }}</h3>
+                            <h3><a href="{{ route('destinations.show') }}" style="color:inherit; text-decoration:none;">{{ $item['title'] }}</a></h3>
                             <p class="similar-location">
                                 <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
                                 {{ $item['location'] }}

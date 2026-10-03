@@ -145,18 +145,18 @@
                             {{-- Setiap item data menghasilkan satu kartu; ubah data katalog di atas sebelum mengubah markup ini. --}}
                             @foreach ($destinations as $destination)
                                 <article class="catalog-card">
-                                    <div class="catalog-image-wrap">
+                                    <a href="{{ route('destinations.show') }}" class="catalog-image-wrap" aria-label="{{ $destination['title'] }}">
                                         <img src="{{ asset('images/figma/' . $destination['image']) }}" alt="{{ $destination['title'] }}" class="catalog-image" width="406" height="192" loading="lazy" decoding="async">
                                         <div class="catalog-tags">@foreach ($destination['tags'] as $tag)<span>{{ $tag }}</span>@endforeach</div>
                                         <span class="catalog-rating">★ {{ $destination['rating'] }}</span>
-                                    </div>
+                                    </a>
                                     <div class="catalog-card-body">
-                                        <h3>{{ $destination['title'] }}</h3>
+                                        <h3><a href="{{ route('destinations.show') }}">{{ $destination['title'] }}</a></h3>
                                         <p class="catalog-location"><img src="{{ asset('images/figma/location-muted.svg') }}" alt="" width="12" height="12">{{ $destination['location'] }}</p>
                                         <p class="catalog-description">{{ $destination['description'] }}</p>
                                         <div class="catalog-card-footer">
                                             <span>Mulai dari<strong>{{ $destination['price'] }}<small>/siswa</small></strong></span>
-                                            <a href="{{ $destination['title'] === 'Kampung Jamur Edukatif' ? route('destinations.show') : route('destinations.index') . '#katalog' }}">Lihat Detail</a>
+                                            <a href="{{ route('destinations.show') }}">Lihat Detail</a>
                                         </div>
                                     </div>
                                 </article>

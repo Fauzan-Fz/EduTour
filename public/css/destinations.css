@@ -290,6 +290,12 @@
     border-radius: 16px;
     background: #fff;
     box-shadow: 0 3px 10px rgba(78, 91, 135, .06);
+    transition: transform .2s ease, box-shadow .2s ease;
+}
+
+.catalog-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 24px rgba(78, 91, 135, .12);
 }
 
 .catalog-image-wrap {
@@ -303,6 +309,11 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
+    transition: transform .3s ease;
+}
+
+.catalog-card:hover .catalog-image {
+    transform: scale(1.03);
 }
 
 .catalog-image-wrap::after {
@@ -354,6 +365,15 @@
     padding: 16px 17px 17px;
 }
 
+.catalog-card h3 a {
+    color: inherit;
+    text-decoration: none;
+    transition: color .15s ease;
+}
+
+.catalog-card h3 a:hover {
+    color: #2563eb;
+}
 .catalog-card h3 {
     margin: 0;
     color: #172033;
