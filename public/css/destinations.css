@@ -299,10 +299,12 @@
 }
 
 .catalog-image-wrap {
+    display: block;
     position: relative;
     height: 168px;
     overflow: hidden;
     background: #dbe6fa;
+    text-decoration: none;
 }
 
 .catalog-image {
