@@ -586,16 +586,27 @@
     border-radius: 20px;
     overflow: hidden;
     transition: transform .2s ease, box-shadow .2s ease;
+    cursor: pointer;
+    position: relative;
 }
 .similar-card:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 10px 24px rgba(15, 23, 42, 0.08);
+    transform: translateY(-4px);
+    box-shadow: 0 12px 28px rgba(15, 23, 42, 0.12);
+}
+.similar-card:hover h3,
+.similar-card:hover h3 a {
+    color: var(--blue, #1f5eff);
+}
+.similar-card:hover .similar-card-img-wrap img {
+    transform: scale(1.04);
 }
 .similar-card-img-wrap {
+    display: block;
     position: relative;
     width: 100%;
     height: 180px;
     overflow: hidden;
+    text-decoration: none;
 }
 .similar-card-img-wrap img {
     width: 100%;

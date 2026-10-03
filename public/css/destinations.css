@@ -291,11 +291,22 @@
     background: #fff;
     box-shadow: 0 3px 10px rgba(78, 91, 135, .06);
     transition: transform .2s ease, box-shadow .2s ease;
+    cursor: pointer;
+    position: relative;
 }
 
 .catalog-card:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 10px 24px rgba(78, 91, 135, .12);
+    transform: translateY(-4px);
+    box-shadow: 0 12px 28px rgba(78, 91, 135, .14);
+}
+.catalog-card:hover h3 a,
+.catalog-card:hover h3 {
+    color: #2563eb;
+}
+.catalog-card:hover .catalog-card-footer a {
+    background: #2563eb;
+    color: #ffffff;
+    border-color: #2563eb;
 }
 
 .catalog-image-wrap {

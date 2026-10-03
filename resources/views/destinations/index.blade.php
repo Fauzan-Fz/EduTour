@@ -144,7 +144,7 @@
                         <div class="destination-card-grid">
                             {{-- Setiap item data menghasilkan satu kartu; ubah data katalog di atas sebelum mengubah markup ini. --}}
                             @foreach ($destinations as $destination)
-                                <article class="catalog-card">
+                                <article class="catalog-card" onclick="window.location.href='{{ route('destinations.show') }}'">
                                     <a href="{{ route('destinations.show') }}" class="catalog-image-wrap" aria-label="{{ $destination['title'] }}">
                                         <img src="{{ asset('images/figma/' . $destination['image']) }}" alt="{{ $destination['title'] }}" class="catalog-image" width="406" height="192" loading="lazy" decoding="async">
                                         <div class="catalog-tags">@foreach ($destination['tags'] as $tag)<span>{{ $tag }}</span>@endforeach</div>

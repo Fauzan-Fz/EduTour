@@ -411,7 +411,7 @@
             <h2>Eksplorasi Serupa</h2>
             <div class="similar-grid">
                 @foreach ($similarDestinations as $item)
-                    <article class="similar-card">
+                    <article class="similar-card" onclick="window.location.href='{{ route('destinations.show') }}'">
                         <a href="{{ route('destinations.show') }}" class="similar-card-img-wrap" aria-label="{{ $item['title'] }}">
                             <img src="{{ asset('images/figma/' . $item['image']) }}" alt="{{ $item['title'] }}" width="380" height="180" loading="lazy" decoding="async">
                             <span class="similar-rating-badge"><span class="star">★</span> {{ $item['rating'] }}</span>
