@@ -62,14 +62,10 @@
 .detail-gallery-main img {
     min-height: 420px;
 }
-.detail-gallery-col-2 {
-    display: grid;
-    grid-template-rows: 1.4fr 1fr;
-    gap: 10px;
-}
+.detail-gallery-col-2,
 .detail-gallery-col-3 {
     display: grid;
-    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-rows: 1.4fr 1fr;
     gap: 10px;
 }
 .gallery-item {

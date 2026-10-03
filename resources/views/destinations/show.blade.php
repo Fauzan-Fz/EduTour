@@ -88,13 +88,10 @@
             </div>
             <div class="gallery-col detail-gallery-col-3">
                 <div class="gallery-item">
-                    <img src="{{ asset('images/figma/detail-gallery-4.webp') }}" alt="Siklus hidup jamur - Fungi Life Cycle" width="320" height="120" loading="lazy" decoding="async">
+                    <img src="{{ asset('images/figma/detail-gallery-4.webp') }}" alt="Siklus hidup jamur - Fungi Life Cycle" width="282" height="334" loading="lazy" decoding="async">
                 </div>
                 <div class="gallery-item">
-                    <img src="{{ asset('images/figma/detail-gallery-5.webp') }}" alt="Praktik media tanam baglog jamur" width="320" height="120" loading="lazy" decoding="async">
-                </div>
-                <div class="gallery-item">
-                    <img src="{{ asset('images/figma/detail-gallery-6.webp') }}" alt="Pemandangan dome rumah kaca Kampung Jamur" width="320" height="140" loading="lazy" decoding="async">
+                    <img src="{{ asset('images/figma/detail-gallery-5.webp') }}" alt="Pemandangan dome rumah kaca Kampung Jamur" width="282" height="139" loading="lazy" decoding="async">
                 </div>
             </div>
         </section>
