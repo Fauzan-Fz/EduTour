@@ -56,7 +56,7 @@
             <nav id="main-navigation" class="main-navigation" aria-label="Navigasi utama">
                 <a href="{{ route('home') }}">Beranda</a>
                 <a class="active" href="{{ route('destinations.index') }}">Destinasi</a>
-                <a href="{{ route('home') }}#cara-kerja">Cara Kerja</a>
+                <a href="{{ route('how-it-works') }}">Cara Kerja</a>
                 <a href="{{ route('home') }}#tentang">Tentang Kami</a>
             </nav>
             <a class="button button-small" href="{{ route('home') }}#masuk">Masuk</a>

@@ -1,0 +1,381 @@
+.how-it-works-page {
+    background: #fff;
+    color: var(--text, #0f172a);
+}
+
+.how-it-works-shell {
+    width: min(1140px, calc(100% - 48px));
+    margin: 0 auto;
+    padding: 32px 0 80px;
+}
+
+/* Eyebrow Tag */
+.tag-eyebrow {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--blue, #1f5eff);
+    margin-bottom: 12px;
+}
+
+/* Hero Section */
+.how-hero {
+    display: grid;
+    grid-template-columns: 1.1fr 1fr;
+    gap: 48px;
+    align-items: center;
+    margin-bottom: 80px;
+}
+.how-hero-content h1 {
+    font-size: 38px;
+    font-weight: 700;
+    color: #0f172a;
+    line-height: 1.25;
+    margin: 0 0 16px;
+    letter-spacing: -0.02em;
+}
+.how-hero-content p.lead {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #475569;
+    margin: 0 0 28px;
+}
+.how-hero-actions {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 40px;
+}
+.btn-primary-pill {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 24px;
+    background: var(--blue, #1f5eff);
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 9999px;
+    text-decoration: none;
+    transition: background .2s ease, transform .1s ease;
+}
+.btn-primary-pill:hover {
+    background: #174edb;
+}
+.btn-secondary-pill {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 24px;
+    background: #ffffff;
+    color: #0f172a;
+    border: 1px solid #cbd5e1;
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 9999px;
+    text-decoration: none;
+    transition: border-color .15s ease, background .15s ease;
+}
+.btn-secondary-pill:hover {
+    border-color: #94a3b8;
+    background: #f8fafc;
+}
+
+/* Stats Row */
+.how-stats-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+}
+.how-stat-card {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 18px;
+    padding: 20px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.02);
+}
+.how-stat-number {
+    display: block;
+    font-size: 26px;
+    font-weight: 700;
+    color: var(--blue, #1f5eff);
+    line-height: 1;
+    margin-bottom: 8px;
+}
+.how-stat-title {
+    margin: 0 0 4px;
+    font-size: 14px;
+    font-weight: 700;
+    color: #0f172a;
+}
+.how-stat-desc {
+    margin: 0;
+    font-size: 12px;
+    line-height: 1.5;
+    color: #64748b;
+}
+
+/* Laptop Mockup Box */
+.how-mockup-card {
+    background: #f8faff;
+    border: 1px solid #e2e8f0;
+    border-radius: 24px;
+    padding: 20px;
+    box-shadow: 0 6px 24px rgba(31, 94, 255, 0.05);
+}
+.how-mockup-img-wrap {
+    border-radius: 14px;
+    overflow: hidden;
+    background: #ffffff;
+}
+.how-mockup-img-wrap img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+.how-mockup-caption {
+    padding: 16px 8px 4px;
+}
+.how-mockup-caption h3 {
+    margin: 0 0 4px;
+    font-size: 15px;
+    font-weight: 700;
+    color: #0f172a;
+}
+.how-mockup-caption p {
+    margin: 0;
+    font-size: 13px;
+    line-height: 1.5;
+    color: #64748b;
+}
+
+/* Section 2: 3-Step Process */
+.how-steps-section {
+    margin-bottom: 80px;
+}
+.how-section-header {
+    margin-bottom: 36px;
+}
+.how-section-header h2 {
+    margin: 0 0 10px;
+    font-size: 32px;
+    font-weight: 700;
+    color: #0f172a;
+    letter-spacing: -0.02em;
+}
+.how-section-header p {
+    margin: 0;
+    font-size: 15px;
+    line-height: 1.6;
+    color: #64748b;
+    max-width: 720px;
+}
+
+.how-steps-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+.how-step-card {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 20px;
+    padding: 28px 24px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.03);
+    transition: transform .2s ease, box-shadow .2s ease;
+}
+.how-step-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 24px rgba(31, 94, 255, 0.08);
+}
+.how-step-badge {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    background: var(--blue, #1f5eff);
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 18px;
+}
+.how-step-card h3 {
+    margin: 0 0 10px;
+    font-size: 18px;
+    font-weight: 700;
+    color: #0f172a;
+}
+.how-step-card p {
+    margin: 0 0 20px;
+    font-size: 14px;
+    line-height: 1.6;
+    color: #475569;
+    flex-grow: 1;
+}
+.how-step-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+.how-step-tag {
+    padding: 4px 12px;
+    background: #eff6ff;
+    color: #2563eb;
+    font-size: 12px;
+    font-weight: 600;
+    border-radius: 9999px;
+}
+
+/* Section 3: Benefits */
+.how-benefits-section {
+    margin-bottom: 80px;
+}
+.how-benefits-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+.how-benefit-card {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 20px;
+    padding: 28px 24px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.03);
+    transition: transform .2s ease, box-shadow .2s ease;
+}
+.how-benefit-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 24px rgba(31, 94, 255, 0.08);
+}
+.benefit-icon-wrap {
+    width: 44px;
+    height: 44px;
+    border-radius: 12px;
+    background: #eff6ff;
+    color: var(--blue, #1f5eff);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 18px;
+}
+.how-benefit-card h3 {
+    margin: 0 0 8px;
+    font-size: 18px;
+    font-weight: 700;
+    color: #0f172a;
+}
+.how-benefit-card p {
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.6;
+    color: #475569;
+}
+
+/* CTA Banner */
+.how-cta-banner {
+    background: var(--blue, #1f5eff);
+    color: #ffffff;
+    border-radius: 24px;
+    padding: 44px 48px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 32px;
+    box-shadow: 0 12px 32px rgba(31, 94, 255, 0.25);
+}
+.how-cta-content h2 {
+    margin: 0 0 10px;
+    font-size: 26px;
+    font-weight: 700;
+    color: #ffffff;
+    letter-spacing: -0.01em;
+}
+.how-cta-content p {
+    margin: 0;
+    font-size: 15px;
+    line-height: 1.55;
+    color: rgba(255, 255, 255, 0.92);
+    max-width: 620px;
+}
+.how-cta-actions {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-shrink: 0;
+}
+.btn-cta-white {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 24px;
+    background: #ffffff;
+    color: var(--blue, #1f5eff);
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 9999px;
+    text-decoration: none;
+    white-space: nowrap;
+    transition: background .15s ease, transform .1s ease;
+}
+.btn-cta-white:hover {
+    background: #f1f5f9;
+}
+.btn-cta-outline {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 24px;
+    background: transparent;
+    color: #ffffff;
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    font-size: 14px;
+    font-weight: 600;
+    border-radius: 9999px;
+    text-decoration: none;
+    white-space: nowrap;
+    transition: border-color .15s ease, background .15s ease;
+}
+.btn-cta-outline:hover {
+    border-color: #ffffff;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+/* Responsive Breakpoints */
+@media (max-width: 1024px) {
+    .how-hero {
+        grid-template-columns: 1fr;
+        gap: 36px;
+    }
+    .how-cta-banner {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 36px 32px;
+    }
+    .how-cta-actions {
+        width: 100%;
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 768px) {
+    .how-stats-grid,
+    .how-steps-grid,
+    .how-benefits-grid {
+        grid-template-columns: 1fr;
+    }
+    .how-hero-content h1 {
+        font-size: 28px;
+    }
+    .how-section-header h2 {
+        font-size: 24px;
+    }
+    .how-cta-content h2 {
+        font-size: 22px;
+    }
+}
