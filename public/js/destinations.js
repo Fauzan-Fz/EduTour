@@ -141,21 +141,49 @@ document.addEventListener('DOMContentLoaded', () => {
         locationSelect.addEventListener('change', applyFilters);
     }
 
-    if (priceMinInput) {
-        priceMinInput.addEventListener('input', () => {
-            formatRupiahInput(priceMinInput);
+    let priceDebounceTimer = null;
+
+    function handlePriceInput() {
+        clearTimeout(priceDebounceTimer);
+        // Menunggu jeda 1.5 detik (1-3 detik) setelah pengguna berhenti mengetik
+        priceDebounceTimer = setTimeout(() => {
+            if (priceMinInput) formatRupiahInput(priceMinInput);
+            if (priceMaxInput) formatRupiahInput(priceMaxInput);
             applyFilters();
+        }, 1500);
+    }
+
+    function handlePriceCommit() {
+        clearTimeout(priceDebounceTimer);
+        if (priceMinInput) formatRupiahInput(priceMinInput);
+        if (priceMaxInput) formatRupiahInput(priceMaxInput);
+        applyFilters();
+    }
+
+    if (priceMinInput) {
+        priceMinInput.addEventListener('input', handlePriceInput);
+        priceMinInput.addEventListener('blur', handlePriceCommit);
+        priceMinInput.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter') {
+                e.preventDefault();
+                handlePriceCommit();
+            }
         });
     }
 
     if (priceMaxInput) {
-        priceMaxInput.addEventListener('input', () => {
-            formatRupiahInput(priceMaxInput);
-            applyFilters();
+        priceMaxInput.addEventListener('input', handlePriceInput);
+        priceMaxInput.addEventListener('blur', handlePriceCommit);
+        priceMaxInput.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter') {
+                e.preventDefault();
+                handlePriceCommit();
+            }
         });
     }
 
     function resetAllFilters() {
+        clearTimeout(priceDebounceTimer);
         if (searchInput) searchInput.value = '';
         if (locationSelect) locationSelect.value = 'Semua Lokasi';
         if (priceMinInput) priceMinInput.value = '';
