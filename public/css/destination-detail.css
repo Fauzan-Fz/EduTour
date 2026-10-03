@@ -1,0 +1,699 @@
+.detail-page {
+    background: #fff;
+    color: var(--text, #0f172a);
+}
+
+.detail-shell {
+    width: min(1200px, calc(100% - 48px));
+    margin: 0 auto;
+    padding: 24px 0 64px;
+}
+
+/* Breadcrumbs */
+.detail-breadcrumbs {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+    color: var(--blue, #1f5eff);
+    margin-bottom: 20px;
+    font-weight: 500;
+}
+.detail-breadcrumbs a {
+    color: var(--blue, #1f5eff);
+    transition: opacity .15s ease;
+}
+.detail-breadcrumbs a:hover {
+    opacity: 0.8;
+}
+.detail-breadcrumbs .separator {
+    color: #94a3b8;
+    font-size: 13px;
+}
+.detail-breadcrumbs .current {
+    color: var(--blue, #1f5eff);
+}
+
+/* Gallery Grid */
+.detail-gallery {
+    display: grid;
+    grid-template-columns: 1.15fr 0.82fr 0.82fr;
+    gap: 10px;
+    border-radius: 20px;
+    overflow: hidden;
+    margin-bottom: 28px;
+    background: #f1f5f9;
+}
+.detail-gallery .gallery-col {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.detail-gallery img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform .25s ease;
+}
+.detail-gallery-main {
+    min-height: 420px;
+}
+.detail-gallery-main img {
+    min-height: 420px;
+}
+.detail-gallery-col-2 {
+    display: grid;
+    grid-template-rows: 1.4fr 1fr;
+    gap: 10px;
+}
+.detail-gallery-col-3 {
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 10px;
+}
+.gallery-item {
+    overflow: hidden;
+    position: relative;
+    background: #e2e8f0;
+}
+.gallery-item:hover img {
+    transform: scale(1.02);
+}
+
+/* Title and Meta */
+.detail-title-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 24px;
+    margin-bottom: 28px;
+    padding-bottom: 20px;
+}
+.detail-badges {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 12px;
+}
+.badge-agrikultur {
+    display: inline-block;
+    padding: 4px 12px;
+    background: #dcfce7;
+    color: #16a34a;
+    font-size: 13px;
+    font-weight: 600;
+    border-radius: 9999px;
+}
+.badge-level {
+    display: inline-block;
+    padding: 4px 12px;
+    background: #fef3c7;
+    color: #d97706;
+    font-size: 13px;
+    font-weight: 600;
+    border-radius: 9999px;
+}
+.detail-heading h1 {
+    margin: 0 0 10px;
+    font-size: 32px;
+    font-weight: 700;
+    color: #0f172a;
+    letter-spacing: -0.02em;
+}
+.detail-meta-line {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    font-size: 14px;
+    color: #64748b;
+}
+.detail-rating {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    font-weight: 600;
+    color: #0f172a;
+}
+.detail-rating .star {
+    color: #f59e0b;
+}
+.detail-rating span {
+    font-weight: 400;
+    color: #64748b;
+}
+.detail-location {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+}
+.detail-price-box {
+    text-align: right;
+    white-space: nowrap;
+}
+.detail-price-box .price-label {
+    display: block;
+    font-size: 13px;
+    color: #64748b;
+    margin-bottom: 4px;
+}
+.detail-price-box .price-value {
+    font-size: 26px;
+    font-weight: 700;
+    color: var(--blue, #1f5eff);
+}
+.detail-price-box .price-unit {
+    font-size: 14px;
+    font-weight: 400;
+    color: #64748b;
+}
+
+/* Main Content Grid */
+.detail-main-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 360px;
+    gap: 40px;
+    align-items: start;
+}
+
+/* Tabs Navigation */
+.detail-tabs-nav {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+    border-bottom: 1px solid #e2e8f0;
+    margin-bottom: 28px;
+    padding-bottom: 0;
+}
+.detail-tab-btn {
+    background: none;
+    border: none;
+    padding: 0 0 12px;
+    font-size: 15px;
+    font-weight: 600;
+    color: #64748b;
+    cursor: pointer;
+    position: relative;
+    transition: color .2s ease;
+}
+.detail-tab-btn:hover {
+    color: #0f172a;
+}
+.detail-tab-btn.active {
+    color: var(--blue, #1f5eff);
+}
+.detail-tab-btn.active::after {
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: var(--blue, #1f5eff);
+    border-radius: 3px 3px 0 0;
+}
+
+/* Tab Content Panes */
+.tab-pane {
+    display: none;
+}
+.tab-pane.active {
+    display: block;
+}
+.tab-pane h2 {
+    font-size: 20px;
+    font-weight: 700;
+    color: #0f172a;
+    margin: 0 0 14px;
+}
+.tab-pane p.lead {
+    font-size: 15px;
+    line-height: 1.65;
+    color: #475569;
+    margin: 0 0 28px;
+}
+
+/* EduQuest: Misi Siswa */
+.eduquest-card {
+    background: #f8faff;
+    border: 1px solid #dbeafe;
+    border-radius: 20px;
+    padding: 24px;
+    margin: 28px 0;
+    position: relative;
+}
+.eduquest-header {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 16px;
+    font-weight: 700;
+    color: #1e40af;
+    margin-bottom: 6px;
+}
+.eduquest-badge-icon {
+    width: 20px;
+    height: 20px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--blue, #1f5eff);
+}
+.eduquest-intro {
+    font-size: 14px;
+    color: #64748b;
+    margin: 0 0 20px;
+}
+.eduquest-tasks-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+}
+.eduquest-task-item {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 16px;
+    padding: 18px;
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+}
+.task-icon-circle {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+.task-icon-green {
+    background: #dcfce7;
+    color: #16a34a;
+}
+.task-icon-amber {
+    background: #fef3c7;
+    color: #d97706;
+}
+.task-content h3 {
+    margin: 0 0 4px;
+    font-size: 14px;
+    font-weight: 700;
+    color: #0f172a;
+}
+.task-content p {
+    margin: 0;
+    font-size: 13px;
+    line-height: 1.5;
+    color: #64748b;
+}
+
+/* Fasilitas & Termasuk (Deskripsi tab) */
+.included-facilities {
+    margin-top: 28px;
+}
+.included-facilities h3 {
+    font-size: 18px;
+    font-weight: 700;
+    color: #0f172a;
+    margin: 0 0 16px;
+}
+.included-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 14px 20px;
+}
+.included-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #334155;
+}
+.included-icon {
+    color: var(--blue, #1f5eff);
+    display: flex;
+    align-items: center;
+}
+
+/* Fasilitas Tab */
+.facilities-main-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+    gap: 16px;
+    margin: 20px 0 28px;
+}
+.facility-pill {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #334155;
+    padding: 6px 0;
+}
+.facility-pill .fac-icon {
+    color: var(--blue, #1f5eff);
+    display: inline-flex;
+    align-items: center;
+}
+
+/* Ulasan Tab */
+.reviews-list {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-bottom: 28px;
+}
+.review-card {
+    border: 1px solid #e2e8f0;
+    border-radius: 16px;
+    padding: 20px;
+    background: #ffffff;
+}
+.review-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 12px;
+}
+.review-author-info {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+.review-avatar {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    object-fit: cover;
+    flex-shrink: 0;
+    background: #e2e8f0;
+}
+.review-author-info h4 {
+    margin: 0 0 2px;
+    font-size: 14px;
+    font-weight: 700;
+    color: #0f172a;
+}
+.review-author-info span {
+    font-size: 12px;
+    color: #64748b;
+}
+.review-rating {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    font-weight: 600;
+    font-size: 14px;
+    color: #0f172a;
+}
+.review-rating .star {
+    color: #f59e0b;
+}
+.review-text {
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.6;
+    color: #475569;
+}
+
+/* Booking Widget (Right Column) */
+.booking-sidebar {
+    position: sticky;
+    top: 96px;
+}
+.booking-card {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 24px;
+    padding: 28px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+}
+.booking-card-header h2 {
+    margin: 0 0 16px;
+    font-size: 18px;
+    font-weight: 700;
+    color: #0f172a;
+    padding-bottom: 14px;
+    border-bottom: 1px solid #f1f5f9;
+}
+.booking-field {
+    margin-bottom: 18px;
+}
+.booking-label {
+    display: block;
+    font-size: 13px;
+    font-weight: 600;
+    color: #0f172a;
+    margin-bottom: 8px;
+}
+.booking-date-btn {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 16px;
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    font-size: 14px;
+    color: #64748b;
+    cursor: pointer;
+    text-align: left;
+    transition: border-color .15s ease;
+}
+.booking-date-btn:hover {
+    border-color: #cbd5e1;
+}
+.booking-stepper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px 16px;
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+}
+.stepper-btn {
+    background: none;
+    border: none;
+    font-size: 18px;
+    font-weight: 600;
+    color: #64748b;
+    cursor: pointer;
+    width: 32px;
+    height: 32px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    transition: background .15s ease, color .15s ease;
+}
+.stepper-btn:hover {
+    background: #f1f5f9;
+    color: #0f172a;
+}
+.stepper-val {
+    font-size: 14px;
+    font-weight: 600;
+    color: #0f172a;
+}
+.booking-select {
+    width: 100%;
+    padding: 12px 16px;
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #0f172a;
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg width='12' height='8' viewBox='0 0 12 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1.5L6 6.5L11 1.5' stroke='%2364748B' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 16px center;
+    cursor: pointer;
+}
+.booking-total-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 24px 0 18px;
+    padding-top: 16px;
+    border-top: 1px solid #f1f5f9;
+}
+.total-label {
+    font-size: 14px;
+    color: #64748b;
+}
+.total-amount {
+    font-size: 20px;
+    font-weight: 700;
+    color: #0f172a;
+}
+.booking-submit-btn {
+    width: 100%;
+    padding: 14px;
+    background: var(--blue, #1f5eff);
+    color: #ffffff;
+    border: none;
+    border-radius: 9999px;
+    font-size: 15px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    cursor: pointer;
+    transition: background .2s ease, transform .1s ease;
+    box-shadow: 0 4px 12px rgba(31, 94, 255, 0.25);
+}
+.booking-submit-btn:hover {
+    background: #174edb;
+}
+.booking-submit-btn:active {
+    transform: scale(0.98);
+}
+.booking-footnote {
+    margin: 10px 0 0;
+    font-size: 12px;
+    color: #94a3b8;
+    text-align: center;
+    line-height: 1.4;
+}
+
+/* Similar Destinations */
+.similar-destinations-section {
+    margin-top: 64px;
+    padding-top: 32px;
+    border-top: 1px solid #f1f5f9;
+}
+.similar-destinations-section h2 {
+    font-size: 24px;
+    font-weight: 700;
+    color: #0f172a;
+    margin: 0 0 24px;
+}
+.similar-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+.similar-card {
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    border-radius: 20px;
+    overflow: hidden;
+    transition: transform .2s ease, box-shadow .2s ease;
+}
+.similar-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 24px rgba(15, 23, 42, 0.08);
+}
+.similar-card-img-wrap {
+    position: relative;
+    width: 100%;
+    height: 180px;
+    overflow: hidden;
+}
+.similar-card-img-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.similar-rating-badge {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(4px);
+    padding: 3px 10px;
+    border-radius: 9999px;
+    font-size: 12px;
+    font-weight: 700;
+    color: #0f172a;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+}
+.similar-rating-badge .star {
+    color: #f59e0b;
+}
+.similar-card-body {
+    padding: 18px 20px 22px;
+}
+.similar-category-tag {
+    display: inline-block;
+    padding: 3px 10px;
+    background: #eff6ff;
+    color: #2563eb;
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    border-radius: 6px;
+    margin-bottom: 8px;
+}
+.similar-card h3 {
+    margin: 0 0 8px;
+    font-size: 16px;
+    font-weight: 700;
+    color: #0f172a;
+    line-height: 1.35;
+}
+.similar-location {
+    margin: 0;
+    font-size: 13px;
+    color: #64748b;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+/* Responsive Breakpoints */
+@media (max-width: 1024px) {
+    .detail-main-layout {
+        grid-template-columns: 1fr;
+    }
+    .booking-sidebar {
+        position: static;
+        max-width: 480px;
+        margin: 0 auto;
+    }
+    .similar-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .detail-gallery {
+        grid-template-columns: 1fr;
+        gap: 8px;
+    }
+    .detail-gallery-main {
+        min-height: 260px;
+    }
+    .detail-gallery-main img {
+        min-height: 260px;
+    }
+    .detail-gallery-col-2,
+    .detail-gallery-col-3 {
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: auto;
+    }
+    .detail-title-row {
+        flex-direction: column;
+        gap: 16px;
+    }
+    .detail-price-box {
+        text-align: left;
+    }
+    .eduquest-tasks-grid {
+        grid-template-columns: 1fr;
+    }
+    .similar-grid {
+        grid-template-columns: 1fr;
+    }
+}

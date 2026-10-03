@@ -156,7 +156,7 @@
                                         <p class="catalog-description">{{ $destination['description'] }}</p>
                                         <div class="catalog-card-footer">
                                             <span>Mulai dari<strong>{{ $destination['price'] }}<small>/siswa</small></strong></span>
-                                            <a href="{{ route('destinations.index') }}#katalog">Lihat Detail</a>
+                                            <a href="{{ $destination['title'] === 'Kampung Jamur Edukatif' ? route('destinations.show') : route('destinations.index') . '#katalog' }}">Lihat Detail</a>
                                         </div>
                                     </div>
                                 </article>

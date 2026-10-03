@@ -6,3 +6,6 @@ use Illuminate\Support\Facades\Route;
 Route::view('/', 'welcome')->name('home');
 
 Route::view('/destinasi', 'destinations.index')->name('destinations.index');
+
+Route::view('/destinasi/kampung-jamur-eduwisata', 'destinations.show')->name('destinations.show');
+Route::redirect('/destinasi/detail', '/destinasi/kampung-jamur-eduwisata');
