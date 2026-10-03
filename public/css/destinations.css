@@ -633,3 +633,32 @@
     }
 
 }
+
+.catalog-empty-state {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: 48px 24px;
+    background: #f8fafc;
+    border: 1px dashed #cbd5e1;
+    border-radius: 16px;
+    margin: 10px 0;
+}
+.catalog-empty-state p {
+    margin: 0 0 16px;
+    color: #64748b;
+    font-size: 14px;
+}
+.catalog-empty-state button {
+    padding: 10px 22px;
+    background: #2563eb;
+    color: #ffffff;
+    border: none;
+    border-radius: 9999px;
+    font-weight: 600;
+    cursor: pointer;
+    font-size: 13px;
+    transition: background .15s ease;
+}
+.catalog-empty-state button:hover {
+    background: #1d4ed8;
+}

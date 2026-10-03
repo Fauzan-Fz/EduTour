@@ -21,6 +21,7 @@
             'price' => 'Rp75.000',
             'description' => 'Pelajari siklus hidup jamur, cara budidaya modern, dan pentingnya agrikultur berkelanjutan.',
             'tags' => ['SD', 'SMP'],
+            'subjects' => ['Pendidikan Agama', 'IPAS', 'Bahasa Indonesia', 'Pendidikan Pancasila'],
         ],
         [
             'image' => 'filter-sd-museum-tubuh.webp',
@@ -29,7 +30,8 @@
             'rating' => '4.9',
             'price' => 'Rp120.000',
             'description' => 'Eksplorasi anatomi manusia secara interaktif. Museum terbesar di Asia yang menampilkan tubuh manusia.',
-            'tags' => ['SMP', 'SMA'],
+            'tags' => ['SD', 'SMP', 'SMA/SMK'],
+            'subjects' => ['Pendidikan Agama', 'IPAS', 'Pendidikan Jasmani', 'Matematika'],
         ],
         [
             'image' => 'filter-sd-pabrik-perak.webp',
@@ -38,7 +40,8 @@
             'rating' => '4.7',
             'price' => 'Rp50.000',
             'description' => 'Kunjungan industri untuk memahami proses manufaktur kerajinan perak dari desain hingga produksi.',
-            'tags' => ['SMA', 'SMP'],
+            'tags' => ['SD', 'SMP', 'SMA/SMK'],
+            'subjects' => ['Pendidikan Agama', 'Seni Rupa', 'Matematika', 'Pendidikan Pancasila'],
         ],
         [
             'image' => 'filter-sd-pusat-budaya.webp',
@@ -47,7 +50,8 @@
             'rating' => '4.6',
             'price' => 'Rp85.000',
             'description' => 'Program imersif mempelajari seni membatik, bermain gamelan, dan memahami nilai-nilai luhur.',
-            'tags' => ['SD', 'SMP', 'SMA'],
+            'tags' => ['SD', 'SMP', 'SMA/SMK'],
+            'subjects' => ['Pendidikan Agama', 'Seni Rupa', 'Pendidikan Pancasila', 'Bahasa Indonesia'],
         ],
     ];
 
@@ -95,17 +99,17 @@
                     <aside class="filter-card" aria-label="Filter destinasi">
                         <label class="filter-search">
                             <span class="sr-only">Cari destinasi</span>
-                            <input type="search" placeholder="Cari destinasi...">
+                            <input type="search" id="catalog-search" placeholder="Cari destinasi..." autocomplete="off">
                             <span aria-hidden="true">⌕</span>
                         </label>
 
                         <fieldset class="filter-group">
                             <legend>JENJANG</legend>
                             <div class="level-options">
-                                <button type="button">TK</button>
-                                <button type="button" class="selected">SD</button>
-                                <button type="button">SMP</button>
-                                <button type="button">SMA/SMK</button>
+                                <button type="button" data-level="TK">TK</button>
+                                <button type="button" class="selected" data-level="SD">SD</button>
+                                <button type="button" data-level="SMP">SMP</button>
+                                <button type="button" data-level="SMA/SMK">SMA/SMK</button>
                             </div>
                         </fieldset>
 
@@ -113,21 +117,21 @@
                             <legend>MATA PELAJARAN</legend>
                             <div class="check-options">
                                 @foreach ($subjects as $index => $subject)
-                                    <label><input type="checkbox" @checked($index === 0)><span>{{ $subject }}</span></label>
+                                    <label><input type="checkbox" data-subject="{{ $subject }}" @checked($index === 0)><span>{{ $subject }}</span></label>
                                 @endforeach
                             </div>
                         </fieldset>
 
                         <fieldset class="filter-group">
                             <legend>LOKASI</legend>
-                            <label class="select-control"><span class="sr-only">Pilih lokasi</span><select><option>Semua Lokasi</option><option>Jawa Timur</option><option>Yogyakarta</option><option>Jawa Tengah</option></select><span aria-hidden="true">⌄</span></label>
+                            <label class="select-control"><span class="sr-only">Pilih lokasi</span><select id="catalog-location"><option value="Semua Lokasi">Semua Lokasi</option><option value="Jawa Timur">Jawa Timur</option><option value="Yogyakarta">Yogyakarta</option><option value="Jawa Tengah">Jawa Tengah</option></select><span aria-hidden="true">⌄</span></label>
                         </fieldset>
 
                         <fieldset class="filter-group price-group">
-                            <div class="filter-label-row"><legend>KISARAN HARGA</legend><button type="button">Reset</button></div>
+                            <div class="filter-label-row"><legend>KISARAN HARGA</legend><button type="button" id="btn-reset-filter">Reset</button></div>
                             <div class="price-fields">
-                                <label><span>Mulai</span><span class="price-input"><input type="text" placeholder="Rp 000"><b>⌾</b></span></label>
-                                <label><span>Hingga</span><span class="price-input"><input type="text" placeholder="Rp 000"><b>⌾</b></span></label>
+                                <label><span>Mulai</span><span class="price-input"><input type="text" id="price-min" placeholder="Rp 0"><b>⌾</b></span></label>
+                                <label><span>Hingga</span><span class="price-input"><input type="text" id="price-max" placeholder="Rp 200.000"><b>⌾</b></span></label>
                             </div>
                         </fieldset>
                     </aside>
@@ -135,16 +139,16 @@
                     <section class="destination-results" aria-labelledby="destination-results-heading">
                         <div class="results-heading">
                             <div>
-                                <span class="results-kicker">REKOMENDASI UNTUK SD</span>
+                                <span class="results-kicker" id="results-kicker">REKOMENDASI UNTUK SD</span>
                                 <h2 id="destination-results-heading">Destinasi Terpilih</h2>
                             </div>
-                            <span class="results-count">1.800+ destinasi</span>
+                            <span class="results-count" id="results-count">1.800+ destinasi</span>
                         </div>
 
                         <div class="destination-card-grid">
                             {{-- Setiap item data menghasilkan satu kartu; ubah data katalog di atas sebelum mengubah markup ini. --}}
                             @foreach ($destinations as $destination)
-                                <article class="catalog-card" onclick="window.location.href='{{ route('destinations.show') }}'">
+                                <article class="catalog-card" onclick="window.location.href='{{ route('destinations.show') }}'" data-title="{{ strtolower($destination['title']) }}" data-location="{{ strtolower($destination['location']) }}" data-price="{{ (int) preg_replace('/\D/', '', $destination['price']) }}" data-tags="{{ implode(',', $destination['tags']) }}" data-subjects="{{ implode(',', $destination['subjects'] ?? ['Pendidikan Agama']) }}">
                                     <a href="{{ route('destinations.show') }}" class="catalog-image-wrap" aria-label="{{ $destination['title'] }}">
                                         <img src="{{ asset('images/figma/' . $destination['image']) }}" alt="{{ $destination['title'] }}" class="catalog-image" width="406" height="192" loading="lazy" decoding="async">
                                         <div class="catalog-tags">@foreach ($destination['tags'] as $tag)<span>{{ $tag }}</span>@endforeach</div>
@@ -161,6 +165,10 @@
                                     </div>
                                 </article>
                             @endforeach
+                            <div id="catalog-empty-state" class="catalog-empty-state" style="display: none;">
+                                <p>Tidak ada destinasi yang cocok dengan filter yang dipilih.</p>
+                                <button type="button" id="btn-empty-reset">Reset Filter</button>
+                            </div>
                         </div>
 
                         <nav class="pagination" aria-label="Pagination destinasi">
@@ -192,5 +200,6 @@
         <div class="footer-legal"><span>© 2026 EduTour. All rights reserved.</span><div><a href="#terms">Terms of Service</a><a href="#privacy">Privacy Policy</a><a href="#cookies">Cookies</a></div></div>
     </footer>
     <script src="{{ asset('js/landing.js') }}" defer></script>
+    <script src="{{ asset('js/destinations.js') }}" defer></script>
 </body>
 </html>
