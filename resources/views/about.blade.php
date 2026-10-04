@@ -43,6 +43,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="Tentang EduTour — Platform eduwisata terpadu yang menghubungkan pembelajaran sekolah dengan pengalaman nyata di industri, budaya, dan alam.">
     <title>Tentang Kami — EduTour</title>
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ asset('favicon.png') }}">
+    <link rel="shortcut icon" href="{{ asset('favicon.ico') }}">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;600&family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@700&display=swap" rel="stylesheet">
