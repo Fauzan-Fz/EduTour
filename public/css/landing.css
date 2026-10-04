@@ -254,7 +254,7 @@ button { font: inherit; }
 .footer-brand > img { width: 40px; height: 40px; object-fit: contain; }
 .footer-brand h2 { margin: 16px 0 12px; font: 700 18px/24px 'Plus Jakarta Sans', sans-serif; }
 .footer-brand > span { color: #64748b; font: 400 12px/18px 'Inter', sans-serif; }
-.footer-links { display: grid; grid-template-columns: 73px 112px 73px 144px; justify-content: end; gap: 64px; }
+.footer-links { display: flex; justify-content: flex-end; align-items: flex-start; gap: 120px; text-align: left; }
 .footer-links h3 { margin: 0 0 16px; font: 700 12px/21px 'Inter', sans-serif; }
 .footer-links div > a { display: block; margin-top: 16px; color: #64748b; font: 400 13px/24px 'Inter', sans-serif; }
 .social-links { display: flex; gap: 12px; }
@@ -292,7 +292,7 @@ button { font: inherit; }
     .route-summary strong { font-size: 14px; }
     .destination-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
     .footer-main { grid-template-columns: 1fr; gap: 40px; }
-    .footer-links { justify-content: start; }
+    .footer-links { justify-content: flex-end; gap: 48px; }
 }
 
 /* Breakpoint ini menjaga footer bersama tetap terbaca saat lebar shell menyempit. */
@@ -326,7 +326,7 @@ button { font: inherit; }
     .route-stop { flex: none; width: auto; min-height: 110px; }
     .route-summary { grid-template-columns: repeat(2, minmax(0, 1fr)); }
     .footer-main { padding-top: 48px; padding-bottom: 48px; }
-    .footer-links { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 32px 24px; }
+    .footer-links { display: flex; flex-direction: row; justify-content: space-between; gap: 32px; }
     .footer-legal { padding: 20px 24px; flex-direction: column; align-items: flex-start; gap: 8px; }
     .footer-legal div { flex-wrap: wrap; gap: 12px 20px; }
 }
@@ -353,7 +353,7 @@ button { font: inherit; }
     .destination-image { height: 190px; }
     .route-stops { grid-template-columns: 1fr; gap: 10px; }
     .route-summary { grid-template-columns: 1fr; gap: 12px; }
-    .footer-links { grid-template-columns: 1fr 1fr; }
+    .footer-links { flex-direction: column; gap: 24px; align-items: flex-start; }
 }
 
 @media (prefers-reduced-motion: reduce) {
