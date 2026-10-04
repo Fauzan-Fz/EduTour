@@ -11,3 +11,6 @@ Route::view('/destinasi/kampung-jamur-eduwisata', 'destinations.show')->name('de
 Route::redirect('/destinasi/detail', '/destinasi/kampung-jamur-eduwisata');
 
 Route::view('/cara-kerja', 'how-it-works')->name('how-it-works');
+
+Route::view('/tentang-kami', 'about')->name('about');
+Route::redirect('/tentang', '/tentang-kami');

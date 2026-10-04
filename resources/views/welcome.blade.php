@@ -56,7 +56,7 @@
         <div class="nav-shell">
             <a class="brand" href="{{ route('home') }}#beranda" aria-label="EduTour beranda"><img src="{{ asset('images/figma/logo.png') }}" alt="" width="32" height="32"><span>EduTour</span></a>
             <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="main-navigation"><span></span><span></span><span></span><span class="sr-only">Buka menu</span></button>
-            <nav id="main-navigation" class="main-navigation" aria-label="Navigasi utama"><a class="active" href="#beranda">Beranda</a><a href="{{ route('destinations.index') }}">Destinasi</a><a href="{{ route('how-it-works') }}">Cara Kerja</a><a href="#tentang">Tentang Kami</a></nav>
+            <nav id="main-navigation" class="main-navigation" aria-label="Navigasi utama"><a class="active" href="#beranda">Beranda</a><a href="{{ route('destinations.index') }}">Destinasi</a><a href="{{ route('how-it-works') }}">Cara Kerja</a><a href="{{ route('about') }}">Tentang Kami</a></nav>
             <a class="button button-small" href="#masuk">Masuk</a>
         </div>
     </header>
