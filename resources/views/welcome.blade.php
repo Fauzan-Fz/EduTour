@@ -29,22 +29,11 @@
     ];
 
     $footerColumns = [
-        'Menu Utama' => [
+        'Related Pages' => [
             ['label' => 'Beranda', 'route' => 'home'],
-            ['label' => 'Katalog Destinasi', 'route' => 'destinations.index'],
-            ['label' => 'Alur Cara Kerja', 'route' => 'how-it-works'],
+            ['label' => 'Destinasi', 'route' => 'destinations.index'],
+            ['label' => 'Cara Kerja', 'route' => 'how-it-works'],
             ['label' => 'Tentang Kami', 'route' => 'about'],
-        ],
-        'Program Belajar' => [
-            ['label' => 'Agrikultur & Alam', 'url' => route('destinations.index')],
-            ['label' => 'Kunjungan Industri', 'url' => route('destinations.index')],
-            ['label' => 'Cagar Budaya & Sejarah', 'url' => route('destinations.index')],
-            ['label' => 'Simulasi Rute Bus', 'url' => route('home') . '#rute'],
-        ],
-        'Bantuan & Kontak' => [
-            ['label' => 'Panduan Perjalanan', 'url' => route('how-it-works')],
-            ['label' => 'Konsultasi Sekolah', 'url' => 'https://wa.me/6281234567890'],
-            ['label' => 'Dukungan Pelaksanaan', 'url' => route('about')],
         ],
     ];
 @endphp
