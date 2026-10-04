@@ -79,7 +79,7 @@
                 <a class="active" href="{{ route('how-it-works') }}">Cara Kerja</a>
                 <a href="{{ route('home') }}#tentang">Tentang Kami</a>
             </nav>
-            <a class="button button-small" href="{{ route('home') }}#masuk">Masuk</a>
+            <a class="button button-small" href="{{ route('destinations.index') }}">Katalog</a>
         </div>
     </header>
 
