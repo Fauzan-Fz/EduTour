@@ -195,7 +195,7 @@ button { font: inherit; }
 .route-heading h2 { max-width: 650px; margin-top: 12px; }
 .mode-pill { padding: 8px 16px; border: 1px solid #dce3ee; border-radius: 999px; background: #fff; color: #475569; font: 600 11px/16px 'Inter', sans-serif; white-space: nowrap; box-shadow: 0 1px 2px rgba(0, 0, 0, .04); }
 .route-panel { margin-top: 48px; padding: 32px; border: 1px solid #dce3ee; border-radius: 16px; background: #fff; box-shadow: 0 1px 2px rgba(40, 41, 61, .05); }
-.route-stops { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 12px; }
+.route-stops { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px; }
 .route-stop { min-height: 118px; padding: 16px 12px; display: flex; flex-direction: column; align-items: center; justify-content: center; border: 1px solid #dce3ee; border-radius: 12px; background: var(--surface); text-align: center; }
 .route-stop.blue { border-color: #b8ccff; background: #f7f9ff; }
 .route-stop img { width: 24px; height: 24px; margin-bottom: 8px; object-fit: contain; }
@@ -287,6 +287,7 @@ button { font: inherit; }
     .supporters-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
     .curriculum-grid { grid-template-columns: 1fr; }
     .curriculum-copy { max-width: none; }
+    .route-stops { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; }
     .route-summary { gap: 16px; }
     .route-summary strong { font-size: 14px; }
     .destination-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
@@ -321,8 +322,8 @@ button { font: inherit; }
     .route-heading, .category-heading { display: block; }
     .mode-pill { display: inline-flex; margin-top: 20px; }
     .route-panel { padding: 16px; }
-    .route-stops { display: flex; overflow-x: auto; padding-bottom: 4px; scroll-snap-type: x mandatory; }
-    .route-stop { flex: 0 0 190px; scroll-snap-align: start; }
+    .route-stops { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; }
+    .route-stop { flex: none; width: auto; min-height: 110px; }
     .route-summary { grid-template-columns: repeat(2, minmax(0, 1fr)); }
     .footer-main { padding-top: 48px; padding-bottom: 48px; }
     .footer-links { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 32px 24px; }
@@ -350,7 +351,8 @@ button { font: inherit; }
     .skill-list { grid-template-columns: 1fr; }
     .destination-grid { grid-template-columns: 1fr; }
     .destination-image { height: 190px; }
-    .route-summary { grid-template-columns: 1fr; }
+    .route-stops { grid-template-columns: 1fr; gap: 10px; }
+    .route-summary { grid-template-columns: 1fr; gap: 12px; }
     .footer-links { grid-template-columns: 1fr 1fr; }
 }
 
