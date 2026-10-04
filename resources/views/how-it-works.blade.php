@@ -77,7 +77,7 @@
                 <a href="{{ route('home') }}">Beranda</a>
                 <a href="{{ route('destinations.index') }}">Destinasi</a>
                 <a class="active" href="{{ route('how-it-works') }}">Cara Kerja</a>
-                <a href="{{ route('home') }}#tentang">Tentang Kami</a>
+                <a href="{{ route('about') }}">Tentang Kami</a>
             </nav>
             <a class="button button-small" href="{{ route('destinations.index') }}">Katalog</a>
         </div>

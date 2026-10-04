@@ -301,8 +301,8 @@ button { font: inherit; }
     .brand { font-size: 22px; }
     .nav-toggle { width: 36px; height: 36px; padding: 8px; display: flex; flex-direction: column; justify-content: center; gap: 4px; border: 0; border-radius: 9px; background: var(--blue-soft); cursor: pointer; }
     .nav-toggle span:not(.sr-only) { width: 20px; height: 2px; background: var(--blue); }
-    .main-navigation { position: absolute; top: 68px; right: 16px; left: 16px; padding: 12px 18px; display: none; flex-direction: column; align-items: stretch; gap: 0; border: 1px solid var(--border); border-radius: 12px; background: #fff; box-shadow: var(--shadow-sm); }
-    .main-navigation.open { display: flex; }
+    .main-navigation { position: absolute; top: 68px; right: 16px; left: 16px; padding: 12px 18px; display: none; flex-direction: column; align-items: stretch; gap: 0; border: 1px solid var(--border); border-radius: 12px; background: #fff; box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.12), 0 8px 10px -6px rgba(0, 0, 0, 0.1); z-index: 999; }
+    .main-navigation.open, .main-navigation.is-open { display: flex !important; }
     .main-navigation a { padding: 12px 4px; }
     .main-navigation a.active::after { right: auto; width: 50px; }
     .nav-shell > .button-small { min-width: auto; min-height: 36px; padding-inline: 14px; font-size: 12px; }

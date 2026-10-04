@@ -468,18 +468,9 @@
         </div>
     </footer>
 
+    <script src="{{ asset('js/landing.js') }}" defer></script>
     <script>
         document.addEventListener('DOMContentLoaded', function () {
-            // Mobile navigation toggle
-            const navToggle = document.querySelector('.nav-toggle');
-            const mainNav = document.getElementById('main-navigation');
-            if (navToggle && mainNav) {
-                navToggle.addEventListener('click', function () {
-                    const isExpanded = navToggle.getAttribute('aria-expanded') === 'true';
-                    navToggle.setAttribute('aria-expanded', !isExpanded);
-                    mainNav.classList.toggle('is-open');
-                });
-            }
 
             // Interactive Tabs
             const tabButtons = document.querySelectorAll('.detail-tab-btn');
