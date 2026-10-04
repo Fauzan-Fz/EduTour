@@ -5,12 +5,7 @@
         'Resources' => ['Galeri', 'FAQ'],
     ];
 
-    $stats = [
-        ['value' => '120+', 'label' => 'Kerja Sama Sekolah'],
-        ['value' => '450+', 'label' => 'Destinasi & Industri Edukatif'],
-        ['value' => '15.000+', 'label' => 'Siswa Teredukasi Nyata'],
-        ['value' => '98%', 'label' => 'Kepuasan Guru & Fasilitator'],
-    ];
+
 
     $values = [
         [
@@ -90,27 +85,17 @@
             <div class="about-hero-visual">
                 <div class="about-hero-card">
                     <div class="about-hero-img-wrap">
-                        <img src="{{ asset('images/figma/image.png') }}" alt="Siswa melakukan kunjungan industri terstruktur" width="512" height="280" fetchpriority="high">
+                        <img src="{{ asset('images/figma/hero-otsuka.webp') }}" alt="Kegiatan kunjungan edukasi siswa ke mitra industri" width="512" height="280" fetchpriority="high">
                     </div>
                     <div class="about-hero-caption">
-                        <h3>Laboratorium Nyata untuk Generasi Muda</h3>
-                        <p>Mengubah kunjungan biasa menjadi ruang eksplorasi keterampilan dan wawasan masa depan.</p>
+                        <h3>Pengalaman Belajar Nyata untuk Siswa</h3>
+                        <p>Menjadikan kegiatan di luar kelas sebagai sarana pengamatan langsung dan pemahaman materi yang berkesan.</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        {{-- Stats Section --}}
-        <section class="about-stats-section" aria-label="Statistik Capaian">
-            <div class="about-stats-grid">
-                @foreach ($stats as $stat)
-                    <div class="about-stat-item">
-                        <strong>{{ $stat['value'] }}</strong>
-                        <span>{{ $stat['label'] }}</span>
-                    </div>
-                @endforeach
-            </div>
-        </section>
+
 
         {{-- Story & Vision Section --}}
         <section class="about-story-section">
@@ -157,7 +142,7 @@
 
         {{-- Supporters Section --}}
         <section class="about-supporters-section">
-            <span class="about-eyebrow">DIPERCAYA & DIDUKUNG OLEH</span>
+            <span class="about-eyebrow">DIDUKUNG OLEH</span>
             <div class="about-supporters-grid">
                 @foreach ($supporters as $sup)
                     <div class="about-supporter-item">
