@@ -29,9 +29,23 @@
     ];
 
     $footerColumns = [
-        'Platform' => ['Beranda', 'Destinasi', 'Chat AI'],
-        'Perusahaan' => ['Tentang Kami', 'Cara Kerja', 'Kemitraan'],
-        'Resources' => ['Galeri', 'FAQ'],
+        'Menu Utama' => [
+            ['label' => 'Beranda', 'route' => 'home'],
+            ['label' => 'Katalog Destinasi', 'route' => 'destinations.index'],
+            ['label' => 'Alur Cara Kerja', 'route' => 'how-it-works'],
+            ['label' => 'Tentang Kami', 'route' => 'about'],
+        ],
+        'Program Belajar' => [
+            ['label' => 'Agrikultur & Alam', 'url' => route('destinations.index')],
+            ['label' => 'Kunjungan Industri', 'url' => route('destinations.index')],
+            ['label' => 'Cagar Budaya & Sejarah', 'url' => route('destinations.index')],
+            ['label' => 'Simulasi Rute Bus', 'url' => route('home') . '#rute'],
+        ],
+        'Bantuan & Kontak' => [
+            ['label' => 'Panduan Perjalanan', 'url' => route('how-it-works')],
+            ['label' => 'Konsultasi Sekolah', 'url' => 'https://wa.me/6281234567890'],
+            ['label' => 'Dukungan Pelaksanaan', 'url' => route('about')],
+        ],
     ];
 @endphp
 <!doctype html>
@@ -98,7 +112,15 @@
     </main>
 
     {{-- Footer beranda menjadi referensi struktur bersama untuk halaman destinasi. --}}
-    <footer id="masuk" class="site-footer"><div class="footer-main shell"><div class="footer-brand"><img src="{{ asset('images/figma/logo.png') }}" alt="EduTour" width="40" height="40"><h2>Solusi Perjalanan Edukasi<br>Terpadu untuk Sekolah Anda.</h2><span>EduTour, 2026.</span></div><div class="footer-links">@foreach ($footerColumns as $heading => $links)<div><h3>{{ $heading }}</h3>@foreach ($links as $link)<a href="{{ $link === 'Destinasi' ? route('destinations.index') : '#' . \Illuminate\Support\Str::slug($link) }}">{{ $link }}</a>@endforeach</div>@endforeach<div><h3>Social Media</h3><div class="social-links"><a href="#instagram" aria-label="Instagram"><img src="{{ asset('images/figma/instagram.svg') }}" alt="" width="20" height="20"></a><a href="#facebook" aria-label="Facebook"><img src="{{ asset('images/figma/facebook.svg') }}" alt="" width="20" height="20"></a><a href="#twitter" aria-label="Twitter"><img src="{{ asset('images/figma/twitter.svg') }}" alt="" width="20" height="20"></a></div></div></div></div><div class="footer-legal"><span>© 2026 EduTour. All rights reserved.</span><div><a href="#terms">Terms of Service</a><a href="#privacy">Privacy Policy</a><a href="#cookies">Cookies</a></div></div></footer>
+    <footer id="masuk" class="site-footer"><div class="footer-main shell"><div class="footer-brand"><img src="{{ asset('images/figma/logo.png') }}" alt="EduTour" width="40" height="40"><h2>Solusi Perjalanan Edukasi<br>Terpadu untuk Sekolah Anda.</h2><span>EduTour, 2026.</span></div><div class="footer-links">@foreach ($footerColumns as $heading => $items)
+                    <div>
+                        <h3>{{ $heading }}</h3>
+                        @foreach ($items as $item)
+                            <a href="{{ isset($item['route']) ? route($item['route']) : $item['url'] }}">{{ $item['label'] }}</a>
+                        @endforeach
+                    </div>
+                @endforeach
+                <div><h3>Social Media</h3><div class="social-links"><a href="#instagram" aria-label="Instagram"><img src="{{ asset('images/figma/instagram.svg') }}" alt="" width="20" height="20"></a><a href="#facebook" aria-label="Facebook"><img src="{{ asset('images/figma/facebook.svg') }}" alt="" width="20" height="20"></a><a href="#twitter" aria-label="Twitter"><img src="{{ asset('images/figma/twitter.svg') }}" alt="" width="20" height="20"></a></div></div></div></div><div class="footer-legal"><span>© 2026 EduTour. All rights reserved.</span><div><a href="#terms">Terms of Service</a><a href="#privacy">Privacy Policy</a><a href="#cookies">Cookies</a></div></div></footer>
     <script src="{{ asset('js/landing.js') }}" defer></script>
 </body>
 </html>

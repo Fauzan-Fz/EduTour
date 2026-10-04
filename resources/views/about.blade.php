@@ -1,8 +1,22 @@
 @php
     $footerColumns = [
-        'Platform' => ['Beranda', 'Destinasi', 'Chat AI'],
-        'Perusahaan' => ['Tentang Kami', 'Cara Kerja', 'Kemitraan'],
-        'Resources' => ['Galeri', 'FAQ'],
+        'Menu Utama' => [
+            ['label' => 'Beranda', 'route' => 'home'],
+            ['label' => 'Katalog Destinasi', 'route' => 'destinations.index'],
+            ['label' => 'Alur Cara Kerja', 'route' => 'how-it-works'],
+            ['label' => 'Tentang Kami', 'route' => 'about'],
+        ],
+        'Program Belajar' => [
+            ['label' => 'Agrikultur & Alam', 'url' => route('destinations.index')],
+            ['label' => 'Kunjungan Industri', 'url' => route('destinations.index')],
+            ['label' => 'Cagar Budaya & Sejarah', 'url' => route('destinations.index')],
+            ['label' => 'Simulasi Rute Bus', 'url' => route('home') . '#rute'],
+        ],
+        'Bantuan & Kontak' => [
+            ['label' => 'Panduan Perjalanan', 'url' => route('how-it-works')],
+            ['label' => 'Konsultasi Sekolah', 'url' => 'https://wa.me/6281234567890'],
+            ['label' => 'Dukungan Pelaksanaan', 'url' => route('about')],
+        ],
     ];
 
 
@@ -173,11 +187,11 @@
                 <span>EduTour, 2026.</span>
             </div>
             <div class="footer-links">
-                @foreach ($footerColumns as $heading => $links)
+                @foreach ($footerColumns as $heading => $items)
                     <div>
                         <h3>{{ $heading }}</h3>
-                        @foreach ($links as $link)
-                            <a href="{{ $link === 'Destinasi' ? route('destinations.index') : ($link === 'Cara Kerja' ? route('how-it-works') : ($link === 'Tentang Kami' ? route('about') : route('home') . '#' . \Illuminate\Support\Str::slug($link))) }}">{{ $link }}</a>
+                        @foreach ($items as $item)
+                            <a href="{{ isset($item['route']) ? route($item['route']) : $item['url'] }}">{{ $item['label'] }}</a>
                         @endforeach
                     </div>
                 @endforeach
